@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: seifeddinebs
+Build-Jdk: 17.0.5
+Implementation-Title: CI-CD-Project
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: tn.esprit
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/CICDPROJECT
+Created-By: Maven Integration for Eclipse
+
