@@ -39,7 +39,6 @@ public class VoyageurServiceImpl implements IVoyageurService{
 	@Override
 	public List<Voyageur> recupererAll() {
 		List<Voyageur> list= (List<Voyageur>) voyageurRepository.findAll();
-		//Afficher la liste des voyageurs
 		for (Voyageur v: list) {
 			System.err.print("Voyageur");
 			System.out.print(v.toString()+"\n");
