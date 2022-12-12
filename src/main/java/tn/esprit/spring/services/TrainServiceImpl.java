@@ -126,7 +126,7 @@ public class TrainServiceImpl implements ITrainService {
         }
     }
 
-   // @Scheduled(fixedRate = 2000)
+  //  @Scheduled(fixedRate = 2000)
     public void TrainsEnGare() {
         List<Voyage> lesvoyages = new ArrayList<>();
         lesvoyages = (List<Voyage>) voyageRepository.findAll();

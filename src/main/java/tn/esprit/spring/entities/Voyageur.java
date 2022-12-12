@@ -53,10 +53,10 @@ public class Voyageur implements Serializable{
 	}
 
 	public Voyageur(Long idVoyageur, String nomVoyageur) {
+		super();
 		this.idVoyageur = idVoyageur;
 		this.nomVoyageur = nomVoyageur;
 	}
-	
 	
 	
 	

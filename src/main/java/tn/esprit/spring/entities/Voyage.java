@@ -161,23 +161,6 @@ public class Voyage  implements Serializable {
 	public Voyage() {
 		super();
 	}
-
-
-	public Voyage(Long idVoyage, long codeVoyage, Ville gareDepart, Ville gareArrivee, Date dateDepart,
-			Date dateArrivee, double heureDepart, double heureArrivee, Train train, List<Voyageur> mesVoyageurs) {
-		this.idVoyage = idVoyage;
-		this.codeVoyage = codeVoyage;
-		this.gareDepart = gareDepart;
-		this.gareArrivee = gareArrivee;
-		this.dateDepart = dateDepart;
-		this.dateArrivee = dateArrivee;
-		this.heureDepart = heureDepart;
-		this.heureArrivee = heureArrivee;
-		this.train = train;
-		this.mesVoyageurs = mesVoyageurs;
-	}
-	
-	
 	
 	
 

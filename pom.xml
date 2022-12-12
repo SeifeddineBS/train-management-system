@@ -9,13 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit</groupId>
-	<artifactId>CICDPROJECT</artifactId>
+	<artifactId>ExamThourayaS2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CI-CD-Project</name>
+	<name>ExamThourayaS2</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
