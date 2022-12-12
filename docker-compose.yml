@@ -6,7 +6,7 @@ services:
       - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: examv2thouraya 
+      MYSQL_DATABASE: Ci_Cd_DB 
     restart: always
     image: mysql:latest
      ports:
@@ -17,10 +17,10 @@ services:
  spring-boot:
     depends_on:
       - db
-    container_name: springboot-app
+    container_name: spring
     ports:
       - "8083:8083"
-    image: amina98/examen
+    image: SeifeddineBS/Ci_Cd_DBexamthourayas2
     networks:
       - AppNet 
     restart: on-failure
