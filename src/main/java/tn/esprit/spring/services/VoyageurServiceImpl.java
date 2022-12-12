@@ -26,14 +26,14 @@ public class VoyageurServiceImpl implements IVoyageurService{
 //	
 //	private static final Logger l = LogManager.getLogger(voyageurServiceImpl.class);
 //	
-	public void ajouterVoyageur(Voyageur voyageur) {
-		voyageurRepository.save(voyageur);
+	public Voyageur ajouterVoyageur(Voyageur voyageur) {
+		return voyageurRepository.save(voyageur);
 		
     }
 
 	@Override
-	public void modifierVoyageur(Voyageur voyageur) {
-		voyageurRepository.save(voyageur);
+	public Voyageur modifierVoyageur(Voyageur voyageur) {
+		return voyageurRepository.save(voyageur);
 	}
 
 	@Override
