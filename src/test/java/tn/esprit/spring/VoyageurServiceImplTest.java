@@ -37,43 +37,52 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest
 public class VoyageurServiceImplTest {
     @Mock
-    VoyageurRepository sto;
+    VoyageurRepository voyageurRepository;
     @InjectMocks
-    VoyageurServiceImpl VoyageurService;
+    VoyageurServiceImpl voyageurService;
+    
     Voyageur voyageur = new Voyageur((long) 10,"Ali");
 
     @Test
     public void testAjouterVoyageur() {
 
-        Mockito.when(VoyageurService.ajouterVoyageur(ArgumentMatchers.any(Voyageur.class))).thenReturn(this.voyageur);
-        Voyageur savedVoyageur= VoyageurService.ajouterVoyageur(this.voyageur);
+        Mockito.when(voyageurService.ajouterVoyageur(ArgumentMatchers.any(Voyageur.class))).thenReturn(this.voyageur);
+        Voyageur savedVoyageur= voyageurService.ajouterVoyageur(this.voyageur);
 
         assertNotNull(savedVoyageur.getIdVoyageur());
         assertNotNull( savedVoyageur.getNomVoyageur());
     //	assertTrue(savedVoyageur.getQteMin()>0);
 
-        VoyageurService.supprimerVoyageur(savedVoyageur);
+        voyageurService.supprimerVoyageur(savedVoyageur);
 
     }
 
     @Test
     public void testSupprimerVoyageur() {
-        VoyageurService.ajouterVoyageur(this.voyageur);
-        VoyageurService.supprimerVoyageur(this.voyageur);
-        assertNull(VoyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur()));
+        voyageurService.ajouterVoyageur(this.voyageur);
+        voyageurService.supprimerVoyageur(this.voyageur);
+        assertNull(voyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur()));
     }
 
     @Test
     public void testRecupererVoyageParId() {
-        Mockito.when(sto.findById(Mockito.anyLong())).thenReturn(Optional.of(this.voyageur));
-        Voyageur voyageur = VoyageurService.recupererVoyageParId(this.voyageur.getIdVoyageur());
+
+        Mockito.when(voyageurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(this.voyageur));
+        Voyageur savedVoyageur=voyageurService.ajouterVoyageur(this.voyageur);
+
+        Voyageur voyageur = voyageurService.recupererVoyageParId(savedVoyageur.getIdVoyageur());
+
+        assertNotNull(voyageur.getIdVoyageur());
+        voyageurService.supprimerVoyageur(savedVoyageur);
+
+
     }
 
 
     /* @Test
     public void testAddVoyageur() {
         Mockito.when(sto.save(s)).thenReturn(s);
-        Voyageur s1 = VoyageurService.addVoyageur(s);
+        Voyageur s1 = voyageurService.addVoyageur(s);
         Assertions.assertNotNull(s1);
 
     } */
@@ -81,8 +90,8 @@ public class VoyageurServiceImplTest {
     @Test
     public void testModifierVoyageur() {
         this.voyageur.setNomVoyageur("Salim");
-        Mockito.when(sto.save(this.voyageur)).thenReturn(this.voyageur);
-        Voyageur voyageur = VoyageurService.modifierVoyageur(this.voyageur);
+        Mockito.when(voyageurRepository.save(this.voyageur)).thenReturn(this.voyageur);
+        Voyageur voyageur = voyageurService.modifierVoyageur(this.voyageur);
         Assertions.assertEquals(this.voyageur,voyageur);
 
     }
