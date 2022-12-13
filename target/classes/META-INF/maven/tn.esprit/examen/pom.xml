@@ -110,7 +110,7 @@
 
 
         </plugins>
-        <finalName>examen</finalName>
+        <finalName>validation</finalName>
 
 
     </build>
