@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Built-By: seifeddinebs
 Build-Jdk: 17.0.5
-Implementation-Title: ExamThourayaS2
+Implementation-Title: examthourayas2
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: tn.esprit
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/ExamThourayaS2
+ -starter-parent/examthourayas2
 Created-By: Maven Integration for Eclipse
 
