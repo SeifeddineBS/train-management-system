@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Built-By: khale
-Build-Jdk: 17.0.1
+Built-By: seifeddinebs
+Build-Jdk: 17.0.5
 Implementation-Title: ExamThourayaS2
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: tn.esprit
